@@ -1,0 +1,12 @@
+# Ask the user for the current time and the hours to wait
+
+current_time = int(input("Enter the current time (0-23): "))
+wait_hours = int(input("Enter the number of hours to wait for the alarm: "))
+
+# Calculate the alarm time using modulo arithmetic
+
+alarm_time = (current_time + wait_hours) % 24
+
+# Display the result
+
+print(f"The alarm will go off at {alarm_time}:00 hours.")
