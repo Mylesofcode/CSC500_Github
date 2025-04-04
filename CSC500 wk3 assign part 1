@@ -1,0 +1,19 @@
+# Program to calculate total meal cost with tip and tax
+
+# Get the cost of the food from the user
+
+food_cost = float(input("Enter the charge for the food: $"))
+
+# Calculate tip (18%) and sales tax (7%)
+
+tip = food_cost * 0.18
+tax = food_cost * 0.07
+total = food_cost + tip + tax
+
+# Display the results
+
+print(f"\nFood Cost: ${food_cost:.2f}")
+print(f"Tip (18%): ${tip:.2f}")
+print(f"Sales Tax (7%): ${tax:.2f}")
+print(f"Total Amount: ${total:.2f}")
+
