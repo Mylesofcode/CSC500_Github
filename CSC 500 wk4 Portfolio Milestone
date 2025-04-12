@@ -1,0 +1,37 @@
+class itemtopurchase:
+    def __init__(self):
+        self.item_name = "none"
+        self.item_price = 0.0
+        self.item_quantity = 0
+
+    def print_item_cost (self):
+        total_cost = self.item_price * self.item_quantity
+        print(f"{self.item_name} {self.item_quantity} @ ${self.item_price:.0f} = ${total_cost:.0f}")
+
+# Main Section
+if __name__ == "__main__":
+        #Create two itemtopurchase objects
+        item1 = itemtopurchase()
+        item2 = itemtopurchase()
+        
+        # Prompt for the first item
+        print("Item 1")
+        item1.item_name = input("Enter the item name:\n")
+        item1.item_price = float(input("Enter the item price:\n"))
+        item1.item_quantity = int(input("Enter the item quantity:\n"))   
+
+        # Prompt for the second item
+        print("\nItem 2")
+        item2.item_name = input("Enter the item name:\n")
+        item2.item_price = float(input("Enter the item price:\n"))
+        item2.item_quantity = int(input("Enter the item quantity:\n")) 
+
+        # Calculate and display total cost
+        print("\nTOTAL COST")
+        item1.print_item_cost()
+        item2.print_item_cost()
+    
+        # Calculate the grand total
+        total_cost = (item1.item_price * item1.item_quantity) + (item2.item_price * item2.item_quantity)
+        print(f"Total: ${total_cost:.0f}")        
+
